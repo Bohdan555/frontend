@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <form class="well form-horizontal" action=" " name='signingForm' method="post"  id="contact_form">
+        <fieldset>
+            <div class="row">
+              <div class="form-group">
+                    <label class="col-md-2 control-label">Login</label>
+                    <div class="col-md-6 inputGroupContainer">
+                      <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input [ngClass]="{'signingError': true}" [(ngModel)]="signingForm.UserLogin"  #userLogin="ngModel" pattern=".{6,}" placeholder="Login"  type="text">
+                        <span>{{userLogin.valid}}</span>
+                      </div>
+                    </div>
+                </div>
+              </div>
+
+                <!-- Text input-->
+              <div class="row">
+                <div class="form-group">
+                  <label class="col-md-2 control-label" >Password</label>
+                    <div class="col-md-6 inputGroupContainer">
+                    <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                    <input name="userPassword" ng-model='userPassword' ng-pattern="/b*/" placeholder="Password" class="form-control" type="text">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="form-group">
+                  <label class='col-md-2 control-label'>
+                  </label>
+                  <div class="col-md-4">
+                    <button class="btn btn-primary">
+                      <span>
+                        Sign Up
+                      </span>
+                    </button>
+                  </div>
+                  <div class="col-md-4">
+                    <button class="btn btn-success">
+                      <span>
+                        Sign In
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+  </div><!-- /.container -->
