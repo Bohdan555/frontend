@@ -1,66 +1,86 @@
-.LogInError{
-  border-color: red;
+
+body{
+	margin:0;
+	color:#6a6f8c;
+	background:#c8c8c8;
+	font-family:Georgia;
 }
-.btn-success
-   {
-      transition: 0.5s;
-   }
-
-   .btn-success:hover, .btn-success:focus
-   {
-      background: white;
-      border-color: #5cb85c;
-      color: black;
-      transition: all 0.4s;
-   }
-
-   .btn-warning
-   {
-      transition: 0.5s;
-   }
-
-   .btn-warning:hover, .btn-warning:focus
-   {
-      background: white;
-      color: black;
-      border-color: #f0ad4e;
-   }
-
-   .panel.with-nav-tabs .nav-tabs
-   {
-      border-bottom: none;
-   }
-   .panel.with-nav-tabs .nav-justified
-   {
-      margin-bottom: -4px;
-   }
-
-   .panel
-   {
-      margin: 7%;
-   }
-
-   .modal-header
-   {
-      background: #FF3838;
-      color: white;
-      text-align: center;
-   }
-
-   .input-group-addon
-   {
-      background-color: #5cb85c;
-      color: white;
-   }
-
-   .iga1
-   {
-      background-color: #f0ad4e;
-      color: white;
-   }
-
-   .iga2
-   {
-      background-color: #FF3838;
-      color: white;
-   }
+label{
+  color : white;
+	font-weight:700 !important;
+	font-size: 17px !important;
+	padding-left: 0;
+}
+.login{
+  text-transform:uppercase;
+  color : white;
+}
+.input-group{
+  width:100%;
+}
+.loginWrapper{
+  background:url(https://raw.githubusercontent.com/khadkamhn/day-01-login-form/master/img/bg.jpg);
+	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+}
+.loginInnerWrapper{
+  background:rgba(40,57,101,.9);
+  padding-top: 150px;
+}
+.signIn{
+  margin-top:10px;
+}
+.signIn div{
+  margin-top: 30px;
+}
+.hr{
+  width:100%;
+  height: 2px;
+  background: rgba(255,255,255,.2);
+}
+.signInButton{
+  background-color:#1161ee !important;
+  color : white;
+  border-radius : 15px !important;
+}
+.signInButton{
+  width: 100%;
+}
+input[type='radio']{
+  display:none;
+}
+input[type='text']{
+  background:rgba(255,255,255,.1);
+  border: none;
+}
+input[type='password']{
+  background:rgba(255,255,255,.1);
+  border: none;
+}
+.login .signInLab + .signInRadBut:checked{
+  color:#fff;
+	border-color:#1161ee;
+}
+.signIn input{
+  border-radius:15px !important;
+}
+.signIn div{
+  margin-top:10px;
+}
+.check + label{
+  color:black;
+  opacity:0.2;
+}
+.check:checked + label {
+  color : white;
+  opacity:1;
+}
+input[type='checkbox']{
+  background-color:blue;
+}
+input[type='radio'] + label{
+color:white;
+text-transform:uppercase;
+}
+input[type='radio']:checked + label{
+  border-bottom: 2px solid #1161ee;
+}
