@@ -1,36 +1,48 @@
 <div class='loginWrapper'>
       <div class='loginInnerWrapper'>
         <div class='container'>
-            <form>
-            <div class='row'>
-                <div class='col-md-4 col-sm-4 col-md-offset-4 signIn'>
-                  <input type="radio" name="loginRadBut" class='signInRadBut' id='SignInRadBut'><label for='SignInRadBut' class="radio-inline">sign in</label>
-                  <input type="radio" name="loginRadBut" class='signUnRadBut' id='SignUpRadBut'><label for='SignUpRadBut' class="radio-inline">sign up</label>
+          <div class='row'>
+            <div class="loginButtons col-md-4 col-sm-4 col-xs-4 col-md-offset-4 col-sm-offset-4 col-xs-offset-4">
+              <input type="radio" name="loginRadBut" class='signInRadBut' id='SignInRadBut' checked><label for='SignInRadBut' class="radio-inline">sign in</label>
+              <input type="radio" name="loginRadBut" class='signUpRadBut' id='SignUpRadBut'><label for='SignUpRadBut' class="radio-inline">sign up</label>
+              <div class='signIn'>
                   <div class="input-group">
                     <label for="username">username</label>
                     <input id="email" type="text" class="form-control" name="username" placeholder="Email">
                   </div>
                   <div class="input-group">
                     <label for="userpassword">password</label>
-                    <input id="password" type="password" class="form-control" name="userpassword" placeholder="Password">
-                  </div>
+                    <input id="password" type="password" ngModel #password='ngModel' class="form-control" name="userpassword" placeholder="Password" pattern='[a-zA-Z]{0,5}'>
+                  </div>                  
                   <div class='input-group'>
                     <div class="checkbox checkbox-primary">
-                      <input type='checkbox' id='KeepSignedCheckBox' class='check styled'>
-                      <label for="KeepSignedCheckBox"><span class="icon"></span> Keep me Signed in</label>
+                      <input type='checkbox' class='check' id="keepSignedInCheckBox">
+                      <label for="keepSignedInCheckBox">Keep me Signed in</label>
                     </div>
                   </div>
                   <div class='hr'>
                   </div>
                   <div class='input-group'>
-                    <button class='btn signInButton'>Sign In</button>
-                  </div>
+                    <button class='btn signButton'><span>Sign In</span></button>
                   </div>
                 </div>
-              </form>
-          <div class='row'>
-
-          </div>
+                <div class='signUp'>
+                    <div class="input-group">
+                      <label for="username">username</label>
+                      <input id="email" type="text" class="form-control" name="username" placeholder="Email">
+                    </div>
+                    <div class="input-group">
+                      <label for="userpassword">password</label>
+                      <input id="password" type="password" class="form-control" name="userpassword" placeholder="Password">
+                    </div>
+                    <div class='hr'>
+                    </div>
+                    <div class='input-group'>
+                      <button class='btn signButton'>Sign In</button>
+                    </div>
+                </div>
+              </div>
+            </div>
         </div>
       </div>
     </div>
