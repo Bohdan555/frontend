@@ -7,13 +7,13 @@
               <input type="radio" name="loginRadBut" class='signUpRadBut' id='SignUpRadBut'><label for='SignUpRadBut' class="radio-inline">sign up</label>
               <div class='signIn'>
                   <div class="input-group">
-                    <label for="username">username</label>
-                    <input id="email" type="text" class="form-control" name="username" placeholder="Email">
+                    <label for="email">email</label>
+                    <input id="text" type="text" ngModel [ngClass]='{"has-error":signInEmail.dirty}' #signInEmail='ngModel' class="form-control" name="useremail" placeholder="Email" required>
                   </div>
                   <div class="input-group">
-                    <label for="userpassword">password</label>
-                    <input id="password" type="password" ngModel #password='ngModel' class="form-control" name="userpassword" placeholder="Password" pattern='[a-zA-Z]{0,5}'>
-                  </div>                  
+                    <label for="assword">password</label>
+                    <input id="password" type="password" ngModel [ngClass]='{"has-error": signInPassword.dirty}' #signInPassword='ngModel' class="form-control" name="userpassword" placeholder="Password" required>
+                  </div>
                   <div class='input-group'>
                     <div class="checkbox checkbox-primary">
                       <input type='checkbox' class='check' id="keepSignedInCheckBox">
@@ -23,22 +23,23 @@
                   <div class='hr'>
                   </div>
                   <div class='input-group'>
-                    <button class='btn signButton'><span>Sign In</span></button>
+                    <button (click)='submitSignIn(signInEmail.value,signInPassword.value)' class='btn signButton' [ngClass]='{"disabled": signInEmail.invalid || signInPassword.invalid}'><span>Sign In</span></button>
                   </div>
                 </div>
                 <div class='signUp'>
                     <div class="input-group">
-                      <label for="username">username</label>
-                      <input id="email" type="text" class="form-control" name="username" placeholder="Email">
+                      <label for="email">email</label>
+                      <input id="email" type="text" [ngClass]='{"has-error":signUpEmail.dirty && signUpEmail.errors?.required }' ngModel #signUpEmail='ngModel' class="form-control" name="useremail" placeholder="Email" required>
                     </div>
                     <div class="input-group">
-                      <label for="userpassword">password</label>
-                      <input id="password" type="password" class="form-control" name="userpassword" placeholder="Password">
+                      <label for="password">password</label>
+                      <input id="password" type="password"  [ngClass]='{"has-error":signUpPassword.dirty && signUpPassword.errors?.required}' ngModel #signUpPassword='ngModel' (input)='OnChangedPassword(signUpPassword.value)' class="form-control" name="userpassword" placeholder="Password" required>
+                      <p class='weakPassword' [hidden]='signUpPassword.errors?.required' #stateOfPassword></p>
                     </div>
                     <div class='hr'>
                     </div>
                     <div class='input-group'>
-                      <button class='btn signButton'>Sign In</button>
+                      <button (click)='submitSignUp(signUpEmail.value,signUpPassword.value)' class='btn signButton' [ngClass]='{"disabled": signUpEmail.invalid || signUpPassword.errors?.required}'><span>Sign Up</span></button>
                     </div>
                 </div>
               </div>
