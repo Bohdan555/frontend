@@ -1,0 +1,58 @@
+// compileCompressed:../../../app/profile/feedbacks/feedbacks.component.css
+
+$font : Gadugi
+
+.base-text
+  font-family: $font
+  color: white
+  font-weight: bold
+
+i.fa
+  &:hover
+    cursor: pointer
+  font-size: 20px
+  margin-left: 10px
+
+.feedbacks
+  .feedbacks-header
+    padding: 15px 0 15px 0
+    background-color: #2e4152
+    .title
+      @extend .base-text
+      font-size: 29px
+  .feedbacks-list
+    background-color: white
+    padding-top: 30px
+    .feedback
+      .image
+        display: inline-block
+      .info
+        display: inline-block
+        position: absolute
+        padding-left: 10px
+        p
+          font-style: $font
+          color: black
+          font-size: 16px
+          font-weight: bold
+      .comment
+        padding-top: 15px
+        p
+          font-style: $font
+          font-size: 15px
+  .feedback-button
+    padding-top: 20px
+    background-color: white
+    text-align: center
+    .more-button
+      padding: 15px 0 15px 9px
+      display: inline-block
+      button
+        border-radius: 22px
+        border-color: #54524f
+        background-color: white
+        padding: 5px 25px 5px 25px
+        span
+          color: #54524f
+          font-family: $font
+          font-size: 15px

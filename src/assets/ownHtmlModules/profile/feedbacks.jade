@@ -1,0 +1,53 @@
+//output:../../../app/profile/feedbacks/feedbacks.component.html
+
+.feedbacks                
+  .feedbacks-header
+    .container
+      .row
+        .col-md-12
+          .title
+            span Feedbacks
+            i.fa.fa-pencil-square-o
+  //- .feedbacks-list
+  //-   .container
+  //-     .row        
+  //-       .col-md-4(*ngFor='let feedback of feedbacks')
+  //-         .feedback
+  //-           .image
+  //-             img(src="../../../assets/pictures/Julia.png", alt="")
+  //-           .info
+  //-             p {{feedback.sender_name}} {{feedback.sender_surname}}
+  //-             p( *ngFor='let mark of feedback.marks' ){{mark.characteristic}}: {{mark.value}}
+  //-             //- p Accuracy: 4.8/5
+  //-               //- p Courtesy: 5/5
+  //-           .comment
+  //-             p {{feedback.text}}
+        //- .col-md-4    
+        //-   .feedback    
+        //-     .image
+        //-       img(src="../../../assets/pictures/Jor.png", alt="")
+        //-     .info
+        //-       p Connory Dew
+        //-       p Professional: 4/5
+        //-       p Accuracy: 4.8/5
+        //-       p Courtesy: 5/5
+        //-     .comment
+        //-       p I really can't think of any words that can describe this piece. All i can say is it blew my mind (in a good way) when I first saw it. I love it.. a lot :) 
+        //- .col-md-4
+        //-   .feedback    
+        //-     .image
+        //-       img(src="../../../assets/pictures/John.png", alt="")
+        //-     .info
+        //-       p Harrison Star
+        //-       p Professional: 4/5
+        //-       p Accuracy: 4.8/5
+        //-       p Courtesy: 5/5
+        //-     .comment
+        //-       p I really can't think of any words that can describe this piece. All i can say is it blew my mind (in a good way) when I first saw it. I love it.. a lot :) 
+  .feedback-button
+     .container
+       .row
+         .col-md-12
+           .more-button
+              button.btn 
+               span See more

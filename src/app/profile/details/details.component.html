@@ -1,0 +1,26 @@
+
+<div class="profile-header">
+  <div class="container">
+    <div class="row">
+      <div class="menu"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="user-photo"><img [src]="user.photo" class="img-circle"/></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="user-info">
+          <div class="user-name">
+            <p>{{user.forename}} {{user.middle_name}} {{user.surname}}</p>
+          </div>
+          <div class="user-location"><i class="fa fa-map-marker"></i><span>{{user.living_place}}</span></div>
+          <div class="user-rating">
+            <p>4.7(30 Reviews)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

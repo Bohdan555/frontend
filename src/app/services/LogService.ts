@@ -1,9 +1,9 @@
-import {Injectable,Inject} from '@angular/core';
+import {Injectable} from '@angular/core';
 import  'rxjs/add/operator/map';
 import {LoginApiConfig} from '../api_config';
 import {Http,Response,Headers} from '@angular/http';
 import {Observable} from 'rxjs/Observable';
-import {LoggerApi} from '../api_config';
+import {LoggerApi} from '../configs/api_config';
 import { CookieService } from 'angular2-cookie/core';
 
 @Injectable()

@@ -1,0 +1,20 @@
+//output:../../../app/profile/details/details.component.html
+
+.profile-header
+  .container
+    .row
+      .menu
+    .row
+      .col-md-12
+        .user-photo
+          img.img-circle([src]="user.photo")
+    .row
+      .col-md-12
+        .user-info
+          .user-name
+            p {{user.forename}} {{user.middle_name}} {{user.surname}}
+          .user-location
+            i.fa.fa-map-marker
+            span {{user.living_place}}
+          .user-rating
+            p 4.7(30 Reviews)

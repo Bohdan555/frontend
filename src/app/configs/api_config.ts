@@ -1,5 +1,5 @@
 export class BaseApi{
-  public static  readonly  baseUrl : string = 'http://193.33.64.97:8083';//'http://fa5dbf4b.ngrok.io'
+  public static  readonly  baseUrl : string = 'http://cd196274.ngrok.io';//'http://193.33.64.97:8083';
 }
 
 export class LoginApiConfig extends BaseApi{
