@@ -6,6 +6,7 @@ import { SigningModule } from './signing/signing.module';
 import { ProfileModule } from './profile/profile.module';
 import { CookieService } from 'angular2-cookie/services/cookies.service';
 import { HttpModule } from '@angular/http';
+import { AppRoutingModule } from './routing/routing.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HttpModule } from '@angular/http';
     BrowserModule,
     SigningModule,
     ProfileModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule
   ],
   providers: [CookieService],
   bootstrap: [AppComponent]

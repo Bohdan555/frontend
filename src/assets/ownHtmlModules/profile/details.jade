@@ -1,16 +1,13 @@
 //output:../../../app/profile/details/details.component.html
-
 .profile-header
   .container
     .row
-      .menu
-    .row
-      .col-md-12
-        .user-photo
-          img.img-circle([src]="user.photo")
+      .menu    
     .row
       .col-md-12
         .user-info
+          .user-photo
+            img.img-circle([src]="user.photo")
           .user-name
             p {{user.forename}} {{user.middle_name}} {{user.surname}}
           .user-location

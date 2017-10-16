@@ -9,6 +9,37 @@
       </div>
     </div>
   </div>
+  <div class="feedbacks-list">
+    <div class="container">
+      <div class="row">       
+        <div *ngFor="let feedback of feedbacks" class="col-md-4">
+          <div class="feedback">
+            <div class="image"><img [src]="feedback.photo"/></div>
+            <div class="info">
+              <p>{{feedback.forename}} {{feedback.surname}}</p>
+              <div class="rates">
+                <div *ngFor="let mark of feedback.marks" class="marks">
+                  <ul class="list-inline">
+                    <li>
+                      <p>{{mark.characteristic}}: </p>
+                    </li>
+                    <li>                   
+                      <div class="progress">
+                        <div [ratingBar]="mark.value" role="progressbar" class="progress-bar progress-bar-info">                               </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="comment">
+              <p>{{feedback.text}}    </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="feedback-button">
     <div class="container">
       <div class="row">

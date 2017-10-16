@@ -12,17 +12,24 @@
             p Varified
   .experience-body
     .container
-      .row
+      .row(*ngFor = 'let experience of experiences')
         .col-md-12
           .experience-list
             .title
-              p Work/Traineeship
-            ul
-              li
-                span Journalist
-              li
-                span 5 years, 5 months
-              li
-                span USA,Canada
-              li
-                span Senior Editor
+              p([innerHTML]='experience.description')
+            .company
+              p {{experience.company.name}}
+              p {{experience.company.utl}}
+              p {{experience.company.location.city}}, {{experience.company.location.country}}
+              p {{experience.company.photo}}
+              p {{experience.position}}
+              p {{experience.timerange.timestart | date}} - {{experience.timerange.timefinish | date}}              
+            //- ul
+            //-   li
+            //-     img([src]='experience.photo')
+            //-   li
+            //-     span {{experience.timerange.timestart}} - {{experience.timerange.finish}}
+            //-   li
+            //-     span {{experience.location.city}}, {{experience.location.country}}
+            //-   li
+            //-     span {{experience.position}}

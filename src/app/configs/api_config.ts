@@ -1,5 +1,5 @@
 export class BaseApi{
-  public static  readonly  baseUrl : string = 'http://cd196274.ngrok.io';//'http://193.33.64.97:8083';
+  public static  readonly  baseUrl : string = 'http://193.33.64.97:8083';
 }
 
 export class LoginApiConfig extends BaseApi{
@@ -14,4 +14,7 @@ export class LoggerApi extends BaseApi{
 export class ProfileApiConfig extends BaseApi{
   public static readonly IndividualEndPoint : string = BaseApi.baseUrl + '/individual';
   public static readonly FeedbacksEndPoint : string = BaseApi.baseUrl + '/feedback';
+  public static readonly SkillsEndPoint : string = BaseApi.baseUrl + '/skills';
+  public static readonly HobbiesEndPoint : string = BaseApi.baseUrl + '/hobbies';
+  public static readonly ExperienceEndPoint : string = BaseApi.baseUrl + '/experience'
 }

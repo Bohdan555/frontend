@@ -7,16 +7,7 @@
       i.fa.fa-pencil-square-o
     .skills-list
       ul.list-inline
-        li
-          img(src="../../../../assets/pictures/css.png", alt="")                                
-          p asd
-        li
-          .vertical-bar
-        li
-          img(src="../../../../assets/pictures/c++.png", alt="")                                                
-          p asd
-        li
-          .vertical-bar
-        li
-          img(src="../../../../assets/pictures/php.png", alt="")                                
-          p asd
+        li(*ngFor='let skill of skills')
+          img([src]="skill.image", alt="")                                
+          p{{skill.name}}
+        

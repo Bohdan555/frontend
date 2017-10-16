@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import { ProfileService } from '../../services/ProfileService';
 import { ProfileApiConfig } from '../../configs/api_config';
+import { FeedbackEntity } from './feedback.entity';
 
 @Component({
   selector: 'feedbacks',
@@ -8,8 +9,9 @@ import { ProfileApiConfig } from '../../configs/api_config';
   styleUrls : ['./feedbacks.component.css']
 })
 export class FeedbacksComponent{
-  private feedbacks : any = {};
-  constructor(private feedbacksProvider : ProfileService){
-    //this.feedbacksProvider.Get(ProfileApiConfig.FeedbacksEndPoint).subscribe(feedbacks => {this.feedbacks = feedbacks; console.log(feedbacks); });
+  private feedbacks : FeedbackEntity[];
+  constructor(private ApiProvider : ProfileService){
+    this.ApiProvider.Get(ProfileApiConfig.FeedbacksEndPoint, FeedbackEntity)
+    .subscribe(feedbacks =>this.feedbacks = feedbacks);
   }
 }

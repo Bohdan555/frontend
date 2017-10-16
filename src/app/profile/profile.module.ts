@@ -7,10 +7,11 @@ import { PersonalInfoModule } from './personalInfo/personalInfo.module';
 import { FeedbacksComponent } from './feedbacks/feedbacks.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProfileService } from '../services/ProfileService';
+import { RatingDirective } from './feedbacks/RatingDirective.directive';
 
 @NgModule({
   imports : [CommonModule,PersonalInfoModule],
-  declarations : [ProfileComponent,DetailsComponent,ExperienceComponent,FeedbacksComponent,FooterComponent],
+  declarations : [ProfileComponent,DetailsComponent,ExperienceComponent,FeedbacksComponent,FooterComponent,RatingDirective],
   exports : [ProfileComponent],
   providers: [ ProfileService]
 })

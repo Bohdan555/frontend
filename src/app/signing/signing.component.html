@@ -1,49 +1,82 @@
-<div class='loginWrapper'>
-      <div class='loginInnerWrapper'>
-        <div class='container'>
-          <div class='row'>
-            <div class="loginButtons col-md-4 col-sm-4 col-xs-4 col-md-offset-4 col-sm-offset-4 col-xs-offset-4">
-              <input type="radio" name="loginRadBut" class='signInRadBut' id='SignInRadBut' checked><label for='SignInRadBut' class="radio-inline">sign in</label>
-              <input type="radio" name="loginRadBut" class='signUpRadBut' id='SignUpRadBut'><label for='SignUpRadBut' class="radio-inline">sign up</label>
-              <div class='signIn'>
-                  <div class="input-group">
-                    <label for="email">email</label>
-                    <input id="text" type="text" ngModel [ngClass]='{"has-error":signInEmail.dirty}' #signInEmail='ngModel' class="form-control" name="useremail" placeholder="Email" required>
-                  </div>
-                  <div class="input-group">
-                    <label for="assword">password</label>
-                    <input id="password" type="password" ngModel [ngClass]='{"has-error": signInPassword.dirty}' #signInPassword='ngModel' class="form-control" name="userpassword" placeholder="Password" required>
-                  </div>
-                  <div class='input-group'>
-                    <div class="checkbox checkbox-primary">
-                      <input type='checkbox' class='check' id="keepSignedInCheckBox">
-                      <label for="keepSignedInCheckBox">Keep me Signed in</label>
-                    </div>
-                  </div>
-                  <div class='hr'>
-                  </div>
-                  <div class='input-group'>
-                    <button (click)='submitSignIn(signInEmail.value,signInPassword.value)' class='btn signButton' [ngClass]='{"disabled": signInEmail.invalid || signInPassword.invalid}'><span>Sign In</span></button>
-                  </div>
-                </div>
-                <div class='signUp'>
-                    <div class="input-group">
-                      <label for="email">email</label>
-                      <input id="email" type="text" [ngClass]='{"has-error":signUpEmail.dirty && signUpEmail.errors?.required }' ngModel #signUpEmail='ngModel' class="form-control" name="useremail" placeholder="Email" required>
-                    </div>
-                    <div class="input-group">
-                      <label for="password">password</label>
-                      <input id="password" type="password"  [ngClass]='{"has-error":signUpPassword.dirty && signUpPassword.errors?.required}' ngModel #signUpPassword='ngModel' (input)='OnChangedPassword(signUpPassword.value)' class="form-control" name="userpassword" placeholder="Password" required>
-                      <p class='weakPassword' [hidden]='signUpPassword.errors?.required' #stateOfPassword></p>
-                    </div>
-                    <div class='hr'>
-                    </div>
-                    <div class='input-group'>
-                      <button (click)='submitSignUp(signUpEmail.value,signUpPassword.value)' class='btn signButton' [ngClass]='{"disabled": signUpEmail.invalid || signUpPassword.errors?.required}'><span>Sign Up</span></button>
-                    </div>
+
+<div class="loginWrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
+        <div class="signIn">
+          <form action="#" method="method">
+            <div class="formName">
+              <p>sign in </p>
+            </div>
+            <div class="formFields">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" placeholder="joetribani@gmail.com" class="form-control"/>
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="email" class="form-control"/>
+              </div>
+              <div class="checkbox">
+                <input type="checkbox" id="checkbox"/>
+                <label for="checkbox" class="checkbox-label">Stay logged In</label><span class="forgot-password">Forgot password?  </span>
+              </div>
+              <div class="signInButton">           
+                <button class="btn"><span>Sign In</span></button>
+                <p>or  </p>
+              </div>
+              <div class="social-networks">
+                <ul class="list-inline">
+                  <li><a href="#" id="facebook"> </a></li>
+                  <li><a href="#" id="google-plus"></a></li>
+                  <li><a href="#" id="linkedIn"></a></li>
+                </ul>
+                <hr/>
+              </div>
+              <div class="footer"><span>Don't have an account? </span><a href="#">Sign Up</a></div>
+            </div>
+          </form>
+        </div>
+        <div class="signUp">
+          <form action="#" method="method">
+            <div class="formName">
+              <p>sign up </p>
+            </div>
+            <div class="formFields">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" name="name" class="form-control"/>
+              </div>
+              <div class="form-group">
+                <label for="surname">Password</label>
+                <input type="type" name="surname" class="form-control"/>
+              </div>
+              <div class="form-group">           
+                <div class="gender-checkboxes">                 
+                  <label for="male-checkbox">Male                  
+                    <input type="radio" name="radio1" id="male-checkbox" value="option1" checked="checked"/><i class="fa fa-circle-o"></i><i class="fa fa-dot-circle-o">                   </i>
+                  </label>
+                  <label for="female-checkbox">Female
+                    <input type="radio" name="radio1" id="female-checkbox" value="option2"/><i class="fa fa-circle-o"></i><i class="fa fa-dot-circle-o">                   </i>
+                  </label>
                 </div>
               </div>
+              <hr/>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" placeholder="joetribani@gmail.com" class="form-control"/>
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="email" class="form-control"/>
+              </div>
+              <div class="signInButton">           
+                <button class="btn"><span>Sign Up</span></button>
+              </div>
             </div>
+          </form>
         </div>
       </div>
     </div>
+  </div>
+</div>

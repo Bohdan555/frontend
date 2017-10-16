@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import  'rxjs/add/operator/map';
-import {LoginApiConfig} from '../api_config';
+import {LoginApiConfig} from '../configs/api_config';
 import {Http,Response,Headers} from '@angular/http';
 import {Observable} from 'rxjs/Observable';
 import {LoggerApi} from '../configs/api_config';

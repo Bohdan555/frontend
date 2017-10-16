@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild,ElementRef,SimpleChanges } from '@angular/core';
 import  'rxjs/add/operator/map';
-import {LoginApiConfig} from '../api_config';
+import {LoginApiConfig} from '../configs/api_config';
 import {Http,Response,Headers} from '@angular/http';
 import {Observable} from 'rxjs/Observable';
 import {Logger} from '../services/LogService';
@@ -36,7 +36,7 @@ export class SigningComponent implements OnInit {
     {
       this.stateOfPassword.nativeElement.innerHTML = 'Medium';
       this.stateOfPassword.nativeElement.style.color = 'yellow';
-    }    
+    }
   }
   submitSignIn(email:string,password:string){
     let signInInfo : any = {

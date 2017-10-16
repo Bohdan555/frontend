@@ -1,91 +1,217 @@
 // compileCompressed: ../../../app/signing/signinig.component.css
 .baseText
-  color : #e8e8e8
-  font-weight: 600 !important
-  font-size: 17px !important
-  font-family: 'Open Sans', sans-serif
-
-label
-  @extend .baseText
-  padding-left: 0
+  font-family: 'Gadugi'
+  font-weight: bold
   text-transform: uppercase
 
-.baseBackGround
-  border-radius: 15px !important
-  border: none
-  background: rgba(255,255,255,.1)
+.baseSocialNetwork
+  display: inline-block
+  width: 38px
+  height: 36px
 
-.signIn
-  position: absolute
-  width: 100%
-  transform: rotateY(180deg)
-  backface-visibility: hidden
-  transition: all .6s ease
+hr
+  background-color: #cbcac9
+  height: 1px
 
-.signUp
-  @extend .signIn
+input[type='checkbox']
+  display: none
 
-.input-group
-  width: 100%
+input[type='checkbox'] + label::before
+  content: '\00a0'
+  border: 1px solid rgba(128,128,128,0.62)
+  border-radius: 2px
+  width: 18px
+  display: inline-block
+  height: 18px
+  vertical-align: top
+  margin-right: 5px
 
-.loginWrapper
-  background: url(https://raw.githubusercontent.com/khadkamhn/day-01-login-form/master/img/bg.jpg)
-  box-shadow: 0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19)
+input[type='checkbox']:checked + label::before
+  background: #2e4152
+  color: white
+  content: "\2713"
+  font-weight: bold
+  text-align: center
 
-.loginInnerWrapper
-  background: rgba(40,57,101,.9)
-  padding-top: 150px
-  height: 600px
-
-.hr
-  width: 100%
-  height: 2px
-  background: rgba(255,255,255,.1)
-
-.signButton
-  @extend .baseText
-  @extend .baseBackGround
-  background-color: #1161ee !important
-  width: 100%
+input[type='checkbox']:checked + label::before
+  background: #2e4152
+  color: white
+  content: "\2713"
+  font-weight: bold
+  text-align: center
 
 input[type='radio']
   display: none
 
-input[type='text']
-  @extend .baseText
-  @extend .baseBackGround
+.fa.fa-circle-o
+  &::before
+    font-size: 20px
+    color: #2e4152
 
-input[type='password']
-  @extend .baseText
-  @extend .baseBackGround
+.fa.fa-dot-circle-o
+  &::before
+    font-size: 20px
+    color: #2e4152
 
-input[type='radio'] + label
-  color: white
-  text-transform: uppercase
+label input[type='radio'] ~ .fa.fa-dot-circle-o
+  display: none
 
-input[type='radio']:checked + label
-  border-bottom: 2px solid #1161ee
+label input[type='radio'] ~ .fa.fa-circle-o
+  display: inline
 
-.loginButtons div
-  margin-top: 15px
+label input[type='radio']:checked ~ .fa.fa-circle-o
+  display: none
 
-.signIn input.has-error
-  border: 1px solid rgba(255, 0, 0, 0.48)
+label input[type='radio']:checked ~ .fa.fa-dot-circle-o
+  display: inline
 
-.login .signIn + .singInRadBut:checked
-  color: #fff
-  border-color: #1161ee
+.formFields label
+  padding-left: 0
+  font-size: 14px
+  color : #6f6f6f
 
-.check + label
+.loginWrapper
+  background-image: url('../../assets/pictures/profile-background.png')
+  height: 665px
+  background-size: cover
+
+.signIn
+  background-color: white
+  padding: 40px
+  margin-top: 50px
+
+.formName
+  p
+    @extend .baseText
+    text-align: center
+    font-size: 25px
+    color : #2e4152
+
+.forgot-password
   color: black
-  opacity: 0.2
+  margin-right: 10px
+  font-weight: bold
+  float: right
 
-.check:checked + label
-  color: white
-  opacity: 1
+.signInButton
+  padding-top: 10px
+  text-align: center
+  button
+    width: 150px
+    border-radius: 16px
+    background-color: #2e4152
+    span
+      @extend .baseText
+      color : white
+  p
+    margin-top: 10px
+    color: #6f6f6f
 
-.loginButtons .signInRadBut:checked + .radio-inline + .signUpRadBut + .radio-inline + .signIn
-	transform: rotate(0)
+.social-networks
+  text-align: center
+  padding-left: 11px
+  a#facebook
+    @extend .baseSocialNetwork
+    background-image: url('../../assets/picturesSignIn/FB.png')
+  a#google-plus
+    @extend .baseSocialNetwork
+    background-image: url('../../assets/picturesSignIn/G+.png')
+  a#linkedIn
+    @extend .baseSocialNetwork
+    background-image: url('../../assets/picturesSignIn/linkedIn.png')
+.footer
+  text-align: center
+  font-size: 16px
+  font-weight: bold
+  a
+    color: #2e4152
+    &:hover
+      text-decoration: none
 
-.loginButtons .signUpRadBut:checked + .radio-inline +.signIn + .signUp
-	transform: rotate(0)
+.signUp
+  background-color: white
+  margin-top: 10px
+  padding: 40px
+
+.gender-checkboxes
+  label
+    font-weight: normal
+// .baseBackGround
+//   border-radius: 15px !important
+//   border: none
+//   background: rgba(255,255,255,.1)
+//
+// .signIn
+//   position: absolute
+//   width: 100%
+//   transform: rotateY(180deg)
+//   backface-visibility: hidden
+//   transition: all .6s ease
+//
+// .signUp
+//   @extend .signIn
+//
+// .input-group
+//   width: 100%
+//
+// .loginWrapper
+//   background: url(https://raw.githubusercontent.com/khadkamhn/day-01-login-form/master/img/bg.jpg)
+//   box-shadow: 0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19)
+//
+// .loginInnerWrapper
+//   background: rgba(40,57,101,.9)
+//   padding-top: 150px
+//   height: 600px
+//
+// .hr
+//   width: 100%
+//   height: 2px
+//   background: rgba(255,255,255,.1)
+//
+// .signButton
+//   @extend .baseText
+//   @extend .baseBackGround
+//   background-color: #1161ee !important
+//   width: 100%
+//
+// input[type='radio']
+//   display: none
+//
+// input[type='text']
+//   @extend .baseText
+//   @extend .baseBackGround
+//
+// input[type='password']
+//   @extend .baseText
+//   @extend .baseBackGround
+//
+// input[type='radio'] + label
+//   color: white
+//   text-transform: uppercase
+//
+// input[type='radio']:checked + label
+//   border-bottom: 2px solid #1161ee
+//
+// .loginButtons div
+//   margin-top: 15px
+//
+// .signIn input.has-error
+//   border: 1px solid rgba(255, 0, 0, 0.48)
+//
+// .login .signIn + .singInRadBut:checked
+//   color: #fff
+//   border-color: #1161ee
+//
+// .check + label
+//   color: black
+//   opacity: 0.2
+//
+// .check:checked + label
+//   color: white
+//   opacity: 1
+//
+// .loginButtons .signInRadBut:checked + .radio-inline + .signUpRadBut + .radio-inline + .signIn
+// 	transform: rotate(0)
+//
+// .loginButtons .signUpRadBut:checked + .radio-inline +.signIn + .signUp
+// 	transform: rotate(0)
