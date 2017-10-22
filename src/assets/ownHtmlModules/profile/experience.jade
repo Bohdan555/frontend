@@ -2,34 +2,34 @@
 
 .profile-experience
   .experience-header
-    .container
+    .container-fluid
       .row     
         .col-md-12      
           .title
             span Professional experience 
-            i.fa.fa-pencil-square-o
-          .varification.pull-right
-            p Varified
+            a(href="")            
+              i.fa.fa-pencil
+            a(href="")
+              i.fa.fa-plus-circle.pull-right
   .experience-body
     .container
       .row(*ngFor = 'let experience of experiences')
         .col-md-12
           .experience-list
-            .title
-              p([innerHTML]='experience.description')
             .company
-              p {{experience.company.name}}
-              p {{experience.company.utl}}
-              p {{experience.company.location.city}}, {{experience.company.location.country}}
-              p {{experience.company.photo}}
-              p {{experience.position}}
-              p {{experience.timerange.timestart | date}} - {{experience.timerange.timefinish | date}}              
-            //- ul
-            //-   li
-            //-     img([src]='experience.photo')
-            //-   li
-            //-     span {{experience.timerange.timestart}} - {{experience.timerange.finish}}
-            //-   li
-            //-     span {{experience.location.city}}, {{experience.location.country}}
-            //-   li
-            //-     span {{experience.position}}
+              .photo
+                img.img-circle([src]='experience.company.photo')              
+              a(href='experience.company.utl') 
+                p{{experience.company.name}}
+              span 
+                i.fa.fa-map-marker
+              span  {{experience.company.location.city}}, {{experience.company.location.country}}
+            .position   
+              ul.list-inline                       
+                li
+                  p {{experience.position}}      
+                li
+                  span {{experience.timerange.timestart | date}} - {{experience.timerange.timefinish | date}}                                 
+            .description
+              p([innerHTML]='experience.description')
+          hr          

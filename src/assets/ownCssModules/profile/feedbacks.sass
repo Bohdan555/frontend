@@ -2,6 +2,9 @@
 
 $font : Gadugi
 
+.container-fluid
+  padding-left: 90px
+
 .base-text
   font-family: $font
   color: white
@@ -20,16 +23,28 @@ i.fa
     .title
       @extend .base-text
       font-size: 29px
+
+      i.fa.fa-plus-circle
+        position: relative
+        top: 12px
+
+      a
+        color: white
+
   .feedbacks-list
     background-color: white
     padding-top: 30px
     .feedback
       .image
         display: inline-block
+        float: left
+        img
+          width: 150px
+          height: 150px
       .info
         display: inline-block
         padding-left: 10px
-        width : 80%
+        width : 180px
         p
           font-style: $font
           color: black
@@ -38,13 +53,15 @@ i.fa
         .rates
           .marks
             p
-              font-size: 10px
-              font-weight: inherit
+              font-size: 14px
+              font-weight: bold
+              font-style: $font
             .progress
-              width: 136px
+              width: 83px
               position: relative
               top: 25px
       .comment
+        clear: both
         padding-top: 15px
         p
           font-style: $font

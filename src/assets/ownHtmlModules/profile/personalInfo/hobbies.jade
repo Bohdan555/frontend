@@ -1,12 +1,19 @@
 //output:../../../../app/profile/personalInfo/hobbies/hobbies.component.html
 
 .col-md-6
-  .hobbies
-    .title
-      span Hobbies
-      i.fa.fa-pencil-square-o
-    .hobbies-list
-      ul.list-inline
-        li(*ngFor='let hobby of hobbies')
-          img([src]="hobby.image", alt="")                
-          p {{hobby.name}}                        
+  .row    
+    .col-md-12      
+      .hobbies        
+        .title
+          span Hobbies 
+          a(href="")                 
+            i.fa.fa-pencil
+          a(href="")
+            i.fa.fa-plus-circle.pull-right
+  .row
+    .col-md-12
+      .hobbies-list
+        ul.list-inline
+          li(*ngFor='let hobby of hobbies')
+            img([src]="hobby.image", alt="")                
+            p {{hobby.name}}                        

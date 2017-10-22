@@ -2,19 +2,22 @@
 
 .feedbacks                
   .feedbacks-header
-    .container
+    .container-fluid
       .row
         .col-md-12
           .title
-            span Feedbacks
-            i.fa.fa-pencil-square-o
+            span Feedbacks    
+            a(href="")                    
+              i.fa.fa-pencil
+            a(href="")
+              i.fa.fa-plus-circle.pull-right
   .feedbacks-list
-    .container
+    .container-fluid
       .row        
         .col-md-4(*ngFor='let feedback of feedbacks')
           .feedback
             .image
-              img([src]='feedback.photo')
+              img.img-circle([src]='feedback.photo')
             .info
               p {{feedback.forename}} {{feedback.surname}}
               .rates

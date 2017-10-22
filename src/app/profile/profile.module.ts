@@ -8,12 +8,14 @@ import { FeedbacksComponent } from './feedbacks/feedbacks.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProfileService } from '../services/ProfileService';
 import { RatingDirective } from './feedbacks/RatingDirective.directive';
+import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
-  imports : [CommonModule,PersonalInfoModule],
+  imports : [BrowserModule,CommonModule,PersonalInfoModule],
   declarations : [ProfileComponent,DetailsComponent,ExperienceComponent,FeedbacksComponent,FooterComponent,RatingDirective],
   exports : [ProfileComponent],
-  providers: [ ProfileService]
+  providers: [ ProfileService],
+  bootstrap:[ProfileComponent]
 })
 
 export class ProfileModule{

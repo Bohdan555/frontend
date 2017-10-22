@@ -1,5 +1,5 @@
 export class BaseApi{
-  public static  readonly  baseUrl : string = 'http://193.33.64.97:8083';
+  public static  readonly  baseUrl : string = 'http://pbrat.com';
 }
 
 export class LoginApiConfig extends BaseApi{

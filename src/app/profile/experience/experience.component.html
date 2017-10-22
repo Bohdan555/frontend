@@ -1,13 +1,10 @@
 
 <div class="profile-experience">
   <div class="experience-header">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">    
         <div class="col-md-12">     
-          <div class="title"><span>Professional experience </span><i class="fa fa-pencil-square-o"></i></div>
-          <div class="varification pull-right">
-            <p>Varified</p>
-          </div>
+          <div class="title"><span>Professional experience </span><a href="">           <i class="fa fa-pencil"></i></a><a href=""><i class="fa fa-plus-circle pull-right"></i></a></div>
         </div>
       </div>
     </div>
@@ -17,18 +14,23 @@
       <div *ngFor="let experience of experiences" class="row">
         <div class="col-md-12">
           <div class="experience-list">
-            <div class="title">
+            <div class="company">
+              <div class="photo"><img [src]="experience.company.photo" class="img-circle"/></div><a href="experience.company.utl"> 
+                <p>{{experience.company.name}}</p></a><span> <i class="fa fa-map-marker"></i></span><span> {{experience.company.location.city}}, {{experience.company.location.country}}</span>
+            </div>
+            <div class="position">  
+              <ul class="list-inline">                      
+                <li>
+                  <p>{{experience.position}}      </p>
+                </li>
+                <li><span>{{experience.timerange.timestart | date}} - {{experience.timerange.timefinish | date}}                                 </span></li>
+              </ul>
+            </div>
+            <div class="description">
               <p [innerHTML]="experience.description"></p>
             </div>
-            <div class="company">
-              <p>{{experience.company.name}}</p>
-              <p>{{experience.company.utl}}</p>
-              <p>{{experience.company.location.city}}, {{experience.company.location.country}}</p>
-              <p>{{experience.company.photo}}</p>
-              <p>{{experience.position}}</p>
-              <p>{{experience.timerange.timestart | date}} - {{experience.timerange.timefinish | date}}              </p>
-            </div>
           </div>
+          <hr/>
         </div>
       </div>
     </div>

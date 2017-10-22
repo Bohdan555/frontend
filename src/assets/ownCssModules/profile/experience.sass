@@ -2,6 +2,11 @@
 
 $font : Gadugi
 
+.container-fluid
+  padding-left: 100px
+
+body
+  font-family: $font
 .base-text
   font-family: $font
   color: white
@@ -13,27 +18,65 @@ $font : Gadugi
     background-color: #02111b
     padding: 15px 0 15px 0
 
+  .title
+    a
+      color: white
+    span
+      font-size: 29px
+    i
+      font-size: 20px
+
+    i.fa.fa-plus-circle
+      position: relative
+      top: 12px
+
+  .varification
+    margin-top: 9px
+    font-size: 18px
+
   .experience-body
     padding-top: 14px
     background-color: white
 
-  .experience-header .title
-    font-size: 29px
-    display: inline-block
 
-  .experience-header .title
-    font-size: 29px
-
-  .experience-header .varification
-    margin-top: 9px
-    text-align: center
-    font-size: 15px
-    display: inline-block
-    width: 153px
-    height: 30px
-    border: 2px solid transparent
-    background-color: #74c590
-    border-radius: 22px
+    // text-align: center
+    // display: inline-block
+    // width: 153px
+    // height: 30px
+    // border: 2px solid transparent
+    // background-color: #74c590
+    // border-radius: 22px
 
   .experience-list
-    font-size: 15px
+    .company
+      .photo
+        display: inline-block
+        float: left
+        img
+          width: 70px
+          height: 70px
+      a
+        p
+          font-size: 27px
+          font-weight: bold
+          margin-bottom: 0
+        &:hover
+          text-decoration: none
+          color: black
+    .position
+      clear: both
+      padding-top: 20px
+      li
+        p
+          font-size: 27px
+          font-weight: bold
+        span
+          font-size: 17px
+          font-weight: bold
+      & ul li:nth-child(2)
+        float: right
+    .worlPeriod
+      position: absolute
+    .description
+      p
+        font-size: 17px

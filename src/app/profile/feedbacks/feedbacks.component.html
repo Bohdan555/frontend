@@ -1,20 +1,20 @@
 
 <div class="feedbacks">               
   <div class="feedbacks-header">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
-          <div class="title"><span>Feedbacks</span><i class="fa fa-pencil-square-o"></i></div>
+          <div class="title"><span>Feedbacks    </span><a href="">                   <i class="fa fa-pencil"></i></a><a href=""><i class="fa fa-plus-circle pull-right"></i></a></div>
         </div>
       </div>
     </div>
   </div>
   <div class="feedbacks-list">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">       
         <div *ngFor="let feedback of feedbacks" class="col-md-4">
           <div class="feedback">
-            <div class="image"><img [src]="feedback.photo"/></div>
+            <div class="image"><img [src]="feedback.photo" class="img-circle"/></div>
             <div class="info">
               <p>{{feedback.forename}} {{feedback.surname}}</p>
               <div class="rates">

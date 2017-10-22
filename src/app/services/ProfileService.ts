@@ -29,11 +29,11 @@ export class ProfileService{
         {
           let deserializedData = this.jsonConverter.deserialize(data.json(),objectEntity);
           return deserializedData;
+        }
+       catch(e)
+       {
+         console.log((<Error>e));
        }
-     catch(e)
-     {
-       console.log((<Error>e));
-     }
    })
      .retryWhen(error => error.delay(ServiceConfig.retryPeriod)
      .take(ServiceConfig.retryAmount));

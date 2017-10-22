@@ -1,13 +1,21 @@
 
 <div class="col-md-6">
-  <div class="skills"> 
-    <div class="title"><span>Skills</span><i class="fa fa-pencil-square-o"></i></div>
-    <div class="skills-list">
-      <ul class="list-inline">
-        <li *ngFor="let skill of skills"><img [src]="skill.image" alt=""/>
-          <p>{{skill.name}}</p>
-        </li>
-      </ul>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="skills"> 
+        <div class="title"><span>Skills    </span><a href="">                                   <i class="fa fa-pencil">             </i></a><a href="">           <i class="fa fa-plus-circle pull-right"></i></a></div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="skills-list">
+        <ul class="list-inline">
+          <li *ngFor="let skill of skills"><img [src]="skill.image" alt=""/>
+            <p>{{skill.name}}</p>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>

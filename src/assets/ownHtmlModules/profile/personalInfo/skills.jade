@@ -1,13 +1,20 @@
 //output:../../../../app/profile/personalInfo/skills/skills.component.html
 
 .col-md-6
-  .skills 
-    .title
-      span Skills
-      i.fa.fa-pencil-square-o
-    .skills-list
-      ul.list-inline
-        li(*ngFor='let skill of skills')
-          img([src]="skill.image", alt="")                                
-          p{{skill.name}}
-        
+  .row
+    .col-md-12
+      .skills 
+        .title
+          span Skills    
+          a(href="")                                    
+            i.fa.fa-pencil              
+          a(href="")            
+            i.fa.fa-plus-circle.pull-right
+  .row
+    .col-md-12
+      .skills-list
+        ul.list-inline
+          li(*ngFor='let skill of skills')
+            img([src]="skill.image", alt="")                                
+            p{{skill.name}}
+          
